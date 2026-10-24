@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Trash</h1>
+<p class="muted">Deleted documents can be restored by their owner for {{ config.TV.TRASH_RETENTION_DAYS }} days, then they are purged. Nobody else can reach a deleted document, and its share links are revoked permanently.</p>
+{% if items %}
+<table><thead><tr><th>Name</th><th>Category</th><th>Deleted</th><th></th></tr></thead><tbody>
+{% for d in items %}
+<tr><td>{{ d.name }}</td><td>{{ d.category }}</td><td>{{ d.deleted_at.strftime('%Y-%m-%d %H:%M') }} UTC</td>
+<td><form method="post" action="{{ url_for('ui.restore', doc_id=d.id) }}"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><button>Restore</button></form></td></tr>
+{% endfor %}</tbody></table>
+{% else %}<p>Trash is empty.</p>{% endif %}
+{% endblock %}
