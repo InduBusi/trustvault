@@ -5,7 +5,7 @@ prove who did.
 
 - **Live demo:** `https://<your-service>.onrender.com` ← replace after deploying
   (free instance: the first request after 15 idle minutes takes up to a minute)
-- **Demo video:** `<link>` ← replace
+- **Demo video:** `https://drive.google.com/file/d/1kLtEmIgoQU-GxUQ7ucOluEBgXlgmHrdo/view?usp=drive_link` ← replace
 - **Write-up:** [WRITEUP.md](WRITEUP.md) · **Threat model:** [THREATS.md](THREATS.md) ·
   **AI log:** [PROMPTS.md](PROMPTS.md) · **API:** [docs/API.md](docs/API.md) ·
   **Permission model:** [docs/PERMISSIONS.md](docs/PERMISSIONS.md)
